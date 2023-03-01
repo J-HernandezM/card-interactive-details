@@ -10,16 +10,19 @@
     --light-grayish-violet:hsl(270, 3%, 87%);
     --dark-grayish-violet:hsl(279, 6%, 55%);
     --very-dark-violet:hsl(278, 68%, 11%);
+    --gradient:linear-gradient(45deg, var(--blue), var(--purple));
 
     font-size: 6.25%;
 
     --xl:24rem;
     --lg:22rem;
-    --md:18rem;
+    --md:17rem;
     --sm:14rem;
     --xs:12rem;
 }
 body{
+    display: grid;
+    place-items: center;
     font-family: 'Space Grotesk', sans-serif;
     background-color: white;
     font-size: var(--xs);
@@ -33,8 +36,9 @@ body{
 main{
     display: grid;
     grid-template-rows: 240rem 1fr;
-    height: 98vh;
+
     width: 100vw;
+    height: 98vh;
     min-width: 345rem;
     max-width: 440rem;
 }
@@ -44,7 +48,10 @@ main{
 }
 .right{
     display: grid;
-    place-items: center;
+    place-items: center center;
+
+    min-height: 460rem;
+    max-height: 560rem;
 }
 /* COMPONENTES */
 
@@ -81,6 +88,16 @@ main{
 
     color: var(--white);
 }
+.left__bcardInfo{
+    position: absolute;
+    top: 75px;
+    right: 40px;
+
+    color: var(--white);
+    font-size: var(--xs);
+    letter-spacing: 1rem;
+}
+
 .left__cardIcon{
     position: absolute;
     left: 25rem;
@@ -93,6 +110,10 @@ form{
     display: grid;
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-columns: 25% 25% 50%;
+    place-items: center;
+
+    width: 80%;
+    height: 60%;
 }
 .cardholderContainer{
     grid-area:1/1/2/4;
@@ -109,20 +130,130 @@ form{
 .btnContainer{
     grid-area:4/1/5/5;
 }
-.form__submitbtn{
-    width: 80%;
+.btn{
+    width: 100%;
+    height: 40rem;
+
+    color: var(--white);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: var(--md);
+
+    background-color: var(--very-dark-violet);
+    border-radius: 8rem;
+    border: none;
+}
+.dateInputs{
+    display: flex;
+    justify-content: space-between;
+
+    width: 95%;
+}
+.dates{
+    width: 45%;
+}
+.boxes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form__inputs{
+    height: 40rem;
+    padding: 20rem 0rem 20rem 20rem;
+
+    border: 1rem solid var(--light-grayish-violet);
+    border-radius: 8rem;
+}
+.form__inputs::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    color: hsla(279, 6%, 55%, 0.521);
+    font-size: var(--md);
 }
 /* TIPOGRAFIA */
 .left__cardNumber{
     font-size: var(--lg);
     grid-area: 1/1/2/3;
 }
-.left__cardName{
-}
 .left__date{
     place-self: end end;
+}
+label{
+    margin-bottom: 4rem;
+
+    letter-spacing: 2rem;
+    color: var(--very-dark-violet);
+    font-weight: bold;
 }
 /* ESTADOS */
 .inactive{
     display: none;
+}
+@media (min-width:440px) and (max-width:1059px) {
+    body{
+        grid-template-rows: 98% 2%;
+
+        height: 100vh;
+        background-color: var(--very-dark-violet);
+    }
+    footer{
+        height: 2vh;
+    }
+    main{
+        height: fit-content;
+    }
+    .right{
+        background-color: var(--white);
+        border-radius: 0 0 20rem 20rem ;
+    }
+    .left{
+        border-radius: 20rem 20rem 0 0;
+        border: 1rem solid white;
+    }
+}
+@media (min-width:1060px) {
+    /* LAYOUT */
+    main{
+        grid-template-rows: 1fr;
+        grid-template-columns: 30% 70%;
+        
+        max-width: 100%;
+    }
+    .right{
+        display: block;
+        min-height: none;
+        max-height: none;
+    }
+    .left{
+        background-image: url(./images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    /* COMPONENTES */
+    .left__frontCard, .left__backCard{
+        top:55%;
+        right: -175rem;
+        left: auto;
+        height: 200rem;
+        width: 350rem;
+    }
+    .left__frontCard{
+        top: 25%;
+        right: -88rem;
+    }
+    .left__bcardInfo{
+        top: 90rem;
+    }
+    .cardimages{
+        object-fit: fill;
+    }
+    form{
+        margin: 25vh auto auto 35%;
+        width:425rem;
+        min-height: 340rem;
+        max-height: 360rem;
+    }
+    /* TYPOGRAPHY */
+    label{
+        font-weight: 500;
+    }
 }

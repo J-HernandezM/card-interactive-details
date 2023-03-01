@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="./styles.css">
   <title>Interactive card details form</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+    .attribution { font-size: 11px; text-align: center; color: white;}
+    .attribution a { color:hsl(0, 100%, 66%); text-decoration: none; }
   </style>
 </head>
 <body>
   <main>
     <div class="left">
       <div class="left__frontCard">
-        <img src="./images/bg-card-front.png" alt="front credit card" class="left__frontCardImg">
+        <img src="./images/bg-card-front.png" alt="front credit card" class="left__frontCardImg cardimages">
         <img src="./images/card-logo.svg" alt="card icon" class="left__cardIcon">
         <div class="left__cardInfo">
           <p class="left__cardNumber">0000 0000 0000 0000</p>
@@ -28,8 +28,8 @@
         </div>
       </div>
       <div class="left__backCard">
-        <img src="./images/bg-card-back.png" alt="back front card" class="left__backCardImg">
-        <div class="left__cardInfo">
+        <img src="./images/bg-card-back.png" alt="back front card" class="left__backCardImg cardimages">
+        <div class="left__bcardInfo">
           <p class="left__cvc">000</p>
         </div>
       </div>
@@ -51,8 +51,10 @@
 
         <div class="expdateContainer boxes">
           <label for="expdate" class="form__labels">EXP. DATE (MM/YY)</label>
-          <input type="number" class="form__inputs" placeholder="MM" required name="month" min="0" max="12">
-          <input type="number" class="form__inputs" placeholder="YY" required name="year" min="23" max="40">
+          <div class="dateInputs">
+            <input type="number" class="form__inputs dates" placeholder="MM" required name="month" min="0" max="12">
+            <input type="number" class="form__inputs dates" placeholder="YY" required name="year" min="23" max="40">
+          </div>
           <span class="form__error inactive">Can't be blank</span>
         </div>
 
@@ -76,7 +78,7 @@
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">J-HernandezM</a>.
     </div>
   </footer>
   <script src="./index.js"></script>
