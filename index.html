@@ -2,50 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./styles.css">
+  <title>Interactive card details form</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
   </style>
 </head>
 <body>
+  <main>
+    <div class="left">
+      <div class="left__frontCard">
+        <img src="./images/bg-card-front.png" alt="front credit card" class="left__frontCardImg">
+        <img src="./images/card-logo.svg" alt="card icon" class="left__cardIcon">
+        <div class="left__cardInfo">
+          <p class="left__cardNumber">0000 0000 0000 0000</p>
+          <p class="left__cardName">Jane Appleseed</p>
+          <div class="left__date">
+            <span class="date__month">00</span>
+            <span>/</span>
+            <span class="date__year">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="left__backCard">
+        <img src="./images/bg-card-back.png" alt="back front card" class="left__backCardImg">
+        <div class="left__cardInfo">
+          <p class="left__cvc">000</p>
+        </div>
+      </div>
+    </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <div class="right">
+      <form action="submit">
+        <div class="cardholderContainer boxes">
+          <label for="cardholder" class="form__labels">CARDHOLDER NAME</label>
+          <input type="text" class="form__inputs" autocomplete="name" placeholder="e.g. Jane Appleseed" id="cardholder" autofocus minlength="5" name="name">
+          <span class="form__error inactive"></span>
+        </div>
 
-  000
+        <div class="cardnumberContainer boxes">
+          <label for="cardnumber">CARD NUMBER</label>
+          <input type="number" class="form__inputs" autocomplete="name" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" name="number">
+          <span class="form__error inactive">Wrong format, numbers only</span>
+        </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+        <div class="expdateContainer boxes">
+          <label for="expdate" class="form__labels">EXP. DATE (MM/YY)</label>
+          <input type="number" class="form__inputs" placeholder="MM" required name="month" min="0" max="12">
+          <input type="number" class="form__inputs" placeholder="YY" required name="year" min="23" max="40">
+          <span class="form__error inactive">Can't be blank</span>
+        </div>
 
-  Card Numbe
-  e.g. 1234 5678 9123 0000
+        <div class="cvcContainer boxes">
+          <label for="cvc" class="form__labels">CVC</label>
+          <input type="number" class="form__inputs" required placeholder="e.g. 123" maxlength="3">
+          <span class="form__error inactive">Can't be blank</span>
+        </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+        <div class="btnContainer boxes"><button class="form__submitbtn btn" type="button">Confirm</button></div>
+      </form>
 
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="right__thanks inactive">
+        <img src="./images/icon-complete.svg" alt="complete check">
+        <p class="thanks__title">THANK YOU!</p>
+        <p class="thanks__description">We've added your card details</p>
+        <button class="thanks__btn btn">Continue</button>
+      </div>
+    </div>
+  </main>  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="./index.js"></script>
 </body>
 </html>
