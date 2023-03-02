@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./styles.css">
   <title>Interactive card details form</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; color: white;}
+    .attribution { font-size: 11px; text-align: center;}
     .attribution a { color:hsl(0, 100%, 66%); text-decoration: none; }
   </style>
 </head>
@@ -39,13 +39,13 @@
       <form action="submit">
         <div class="cardholderContainer boxes">
           <label for="cardholder" class="form__labels">CARDHOLDER NAME</label>
-          <input type="text" class="form__inputs" autocomplete="name" placeholder="e.g. Jane Appleseed" id="cardholder" autofocus minlength="5" name="name">
+          <input type="text" class="form__inputs" autocomplete="name" placeholder="e.g. Jane Appleseed" id="cardholder" autofocus minlength="5" name="name" pattern="^[a-zA-Z]{2,}\s[a-zA-Z]{2,}$">
           <span class="form__error inactive"></span>
         </div>
 
         <div class="cardnumberContainer boxes">
           <label for="cardnumber">CARD NUMBER</label>
-          <input type="number" class="form__inputs" autocomplete="name" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" name="number">
+          <input type="number" class="form__inputs" autocomplete="name" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" name="number" pattern="^\d{16}(?!.*e)$">
           <span class="form__error inactive">Wrong format, numbers only</span>
         </div>
 

@@ -170,8 +170,9 @@ form{
 }
 /* TIPOGRAFIA */
 .left__cardNumber{
-    font-size: var(--lg);
+    font-size: var(--xl);
     grid-area: 1/1/2/3;
+    letter-spacing: 0.2rem;
 }
 .left__date{
     place-self: end end;
@@ -182,6 +183,10 @@ label{
     letter-spacing: 2rem;
     color: var(--very-dark-violet);
     font-weight: bold;
+}
+.left__cardName{
+    letter-spacing: 1rem;
+    font-weight: 500;
 }
 /* ESTADOS */
 .inactive{
@@ -251,7 +256,13 @@ label{
         min-height: 340rem;
         max-height: 360rem;
     }
+    .left__cardInfo{
+        width: 300rem;
+    }
     /* TYPOGRAPHY */
+    .left__cardNumber{
+        letter-spacing: 1.7rem;
+    }
     label{
         font-weight: 500;
     }
