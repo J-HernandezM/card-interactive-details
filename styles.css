@@ -14,6 +14,7 @@
 
     font-size: 6.25%;
 
+    --xxl:30rem;
     --xl:24rem;
     --lg:22rem;
     --md:17rem;
@@ -115,6 +116,15 @@ form{
     width: 80%;
     height: 60%;
 }
+.right__thanks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 60%;
+}
 .cardholderContainer{
     grid-area:1/1/2/4;
 }
@@ -132,7 +142,7 @@ form{
 }
 .btn{
     width: 100%;
-    height: 40rem;
+    height: 52rem;
 
     color: var(--white);
     font-family: 'Space Grotesk', sans-serif;
@@ -141,6 +151,10 @@ form{
     background-color: var(--very-dark-violet);
     border-radius: 8rem;
     border: none;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color:hsla(278, 68%, 11%, 0.904);
 }
 .dateInputs{
     display: flex;
@@ -168,7 +182,17 @@ form{
     color: hsla(279, 6%, 55%, 0.521);
     font-size: var(--md);
 }
+.form__inputs:hover{
+    cursor: pointer;
+}
+.form__inputs:focus{
+    border: 1px solid var(--purple) !important; 
+    outline: none;
+}
 /* TIPOGRAFIA */
+.form__error{
+    color: var(--red);
+}
 .left__cardNumber{
     font-size: var(--xl);
     grid-area: 1/1/2/3;
@@ -188,9 +212,24 @@ label{
     letter-spacing: 1rem;
     font-weight: 500;
 }
+.thanks__title{
+    margin:40rem 0rem 16rem 0rem;
+
+    font-size: var(--xxl);
+    color: var(--very-dark-violet);
+}
+.thanks__description{
+    margin-bottom: 48rem;
+
+    font-size: var(--md);
+    color: var(--dark-grayish-violet);
+}
 /* ESTADOS */
 .inactive{
     display: none;
+}
+.modified{
+    border: 1rem solid var(--red);
 }
 @media (min-width:440px) and (max-width:1059px) {
     body{
@@ -209,8 +248,15 @@ label{
         background-color: var(--white);
         border-radius: 0 0 20rem 20rem ;
     }
+    .right__thanks{
+        width: 80%;
+        height: 80%;
+    }
     .left{
         border-radius: 20rem 20rem 0 0;
+    }
+    .btn{
+        height: 52rem;
     }
 }
 @media (min-width:1060px) {
@@ -233,6 +279,12 @@ label{
         height: 100vh;
     }
     /* COMPONENTES */
+    .right__thanks{
+        margin: 25vh auto auto 35%;
+        width:425rem;
+        min-height: 340rem;
+        max-height: 360rem; 
+    }
     .left__frontCard, .left__backCard{
         top:55%;
         right: -175rem;

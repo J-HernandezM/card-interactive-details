@@ -36,32 +36,32 @@
     </div>
 
     <div class="right">
-      <form action="submit">
+      <form action="submit" class="">
         <div class="cardholderContainer boxes">
           <label for="cardholder" class="form__labels">CARDHOLDER NAME</label>
-          <input type="text" class="form__inputs" autocomplete="name" placeholder="e.g. Jane Appleseed" id="cardholder" autofocus minlength="5" name="name" pattern="^[a-zA-Z]{2,}\s[a-zA-Z]{2,}$">
-          <span class="form__error inactive"></span>
+          <input type="text" class="form__inputs" autocomplete="name" placeholder="e.g. Jane Appleseed" id="cardholder" autofocus minlength="5" name="name" pattern="^[a-zA-Z]{2,}\s[a-zA-Z]{2,}$" aria-describedby="nameSpan">
+          <span id="nameSpan" class="form__error inactive">One name and last name required</span>
         </div>
 
         <div class="cardnumberContainer boxes">
           <label for="cardnumber">CARD NUMBER</label>
-          <input type="number" class="form__inputs" autocomplete="name" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" name="number" pattern="^\d{16}(?!.*e)$">
-          <span class="form__error inactive">Wrong format, numbers only</span>
+          <input type="text" pattern="^\d{16}$" class="form__inputs" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" name="number" aria-describedby="numberSpan">
+          <span id="numberSpan" class="form__error inactive">Wrong format, numbers only. Use 16 digits</span>
         </div>
 
         <div class="expdateContainer boxes">
           <label for="expdate" class="form__labels">EXP. DATE (MM/YY)</label>
           <div class="dateInputs">
-            <input type="number" class="form__inputs dates" placeholder="MM" required name="month" min="0" max="12" id="month">
-            <input type="number" class="form__inputs dates" placeholder="YY" required name="year" min="23" max="40" id="year">
+            <input type="number" class="form__inputs dates" placeholder="MM" required name="month" min="0" max="12" id="month" aria-describedby="dateSpan">
+            <input type="number" class="form__inputs dates" placeholder="YY" required name="year" min="20" max="50" id="year" aria-describedby="dateSpan">
           </div>
-          <span class="form__error inactive">Can't be blank</span>
+          <span id="dateSpan" class="form__error inactive">Please use a valid date</span>
         </div>
 
         <div class="cvcContainer boxes">
           <label for="cvc" class="form__labels">CVC</label>
-          <input type="number" class="form__inputs" required placeholder="e.g. 123" maxlength="3" id="cvc">
-          <span class="form__error inactive">Can't be blank</span>
+          <input type="text" class="form__inputs" required placeholder="e.g. 123" id="cvc" aria-describedby="cvcSpan" minlength="3">
+          <span class="form__error inactive" id="cvcSpan">Can't be blank</span>
         </div>
 
         <div class="btnContainer boxes"><button class="form__submitbtn btn" type="button">Confirm</button></div>

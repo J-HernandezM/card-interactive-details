@@ -9,6 +9,14 @@ const realName=document.querySelector('.left__cardName')
 const realNumber=document.querySelector('.left__cardNumber')
 const realMonth=document.querySelector('.date__month')
 const realYear=document.querySelector('.date__year')
+const realCvc=document.querySelector('.left__cvc')
+
+const confirmBtn=document.querySelector('.form__submitbtn')
+const thanksBtn=document.querySelector('.thanks__btn')
+const rightSection=document.querySelector('.right__thanks')
+const form=document.querySelector('form')
+
+let inputs=[inputCardholder, inputCardnumber, inputCvc, inputMonth, inputYear]
 
 
 //LIMITAR EL LENGHT DEL INPUT DEL USUARIO, BORRANDOLE LOS VALORES ADICIONALES
@@ -69,8 +77,21 @@ function listeners(){
 
     inputCvc.addEventListener('keyup', (event)=>{
         let userEntry = event.target.value.split('')
+        let newEntry
         if(userEntry.length>3){
-            let newEntry=userEntry.slice(0, 3)
+            newEntry=userEntry.slice(0, 3)
+            event.target.value=newEntry.join('')
+            realCvc.innerHTML=event.target.value
+        }
+        else{
+            newEntry=userEntry
+            while(userEntry.length<3){
+                newEntry.push('0')
+            }
+            realCvc.innerHTML=newEntry.join('')
+        }
+        if(isNaN(event.target.value)){
+            newEntry=userEntry.slice(0,0)
             event.target.value=newEntry.join('')
         }
     })
@@ -97,4 +118,43 @@ function listeners(){
         }
         
     })
+    //boton para continuar con la siguiente pantalla
+    confirmBtn.addEventListener('click', ()=>{
+        let correctos=0
+        inputs.forEach((input)=>{
+            if(!input.classList.contains('modified')){
+                correctos+=1
+            }
+        })
+        if(correctos==inputs.length){
+            rightSection.classList.remove('inactive')
+            form.classList.add('inactive')
+            thanksBtn.addEventListener('click', resetPage)
+        }
+        else{alert('Correct all the fields')}
+    })
+}
+errors()
+function errors(){
+    inputs.forEach((input)=>{
+        input.addEventListener('blur', (blurEvent)=>{
+            let isValid=blurEvent.target.validity.valid
+            let spanId=blurEvent.target.getAttribute('aria-describedby')
+            let errorContainer=document.getElementById(spanId)
+            let inputId=blurEvent.target.id
+            let inputSelected=document.getElementById(inputId)
+            if(!isValid){
+                errorContainer.classList.remove('inactive')
+                inputSelected.classList.add('modified')
+            }
+            else{
+                errorContainer.classList.add('inactive')
+                inputSelected.classList.remove('modified')
+            }
+        })
+    })
+
+}
+function resetPage(){
+    window.location.reload()
 }
