@@ -192,7 +192,7 @@ label{
         grid-template-rows: 98% 2%;
 
         height: 100vh;
-        background-color: var(--very-dark-violet);
+        background-color: var(--light-grayish-violet);
     }
     footer{
         height: 2vh;
@@ -206,7 +206,6 @@ label{
     }
     .left{
         border-radius: 20rem 20rem 0 0;
-        border: 1rem solid white;
     }
 }
 @media (min-width:1060px) {
