@@ -1,105 +1,86 @@
-# Frontend Mentor - Interactive card details form
+# Frontend Mentor - Interactive card details form solution
 
-![Design preview for the Interactive card details form coding challenge](./design/desktop-preview.jpg)
+Esta es mi propuesta de solucion al reto [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw).
 
-## Welcome! 👋
+- [Descripcion](#descripcion)
+  - [El desafio](#el-desafio)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [Mi proceso](#mi-proceso)
+  - [Hecho con](#hecho-con)
+  - [Lo aprendido](#lo-que-aprendi)
+  - [Aprendiendo](#aprendiendo)
+- [Autor](#autor)
 
-Thanks for checking out this front-end coding challenge.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Descripcion
+Componente interactivo tipo formulario para llenar una tarjeta. Dinamicamente los numeros se disponen en los componentes ilustrativos, teniendo dos pantallas y pudiendo reiniciarlo.
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+## El desafio
 
-## The challenge
+El usuario deberia poder
 
-Your challenge is to build out this interactive card details form and get it looking as close to the design as possible.
+- Llenar el formulario y ver como se actualizan los datos en tiempo real.
+- Recibir un mensaje de error si:
+  - Cualquier input esta vacio.
+  - Cualquiera de los campos esta en el formato inadecuado
+- Ver el layout optimo dependiendo de su tamano de pantalla.
+- Ver la interaccion cuando se coloca el mouse encima de los elementos.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Screenshot
 
-Your users should be able to: 
+![](./assets/images/screenshot.png)
 
-- Fill in the form and see the card details update in real-time
-- Receive error messages when the form is submitted if:
-  - Any input field is empty
-  - The card number, expiry date, or CVC fields are in the wrong format
-- View the optimal layout depending on their device's screen size
-- See hover, active, and focus states for interactive elements on the page
+## Links
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+- Solucion: [GITHUB](https://github.com/J-HernandezM/card-interactive-details/)
+- Live site: [PAGES](https://j-hernandezm.github.io/card-interactive-details/)
 
-### Expected behaviour
 
-- Update the details on the card as the user fills in the fields
-- Validate the form fields when the form is submitted
-- If there are no errors, display the completed state
-- Reset the form when the user clicks "Continue" on the completed state
+## Mi proceso
 
-**⚠️ IMPORTANT ⚠️: When you create the live version of your project, we recommmend giving it a random name for the URL. This is because with it being a fake credit card form, some browsers will open a warning notice before people can access your project. So it's best to name the project something unrelated to credit cards so that browsers don't show the warning to people viewing your project.**
+Para este ejercicio lo que mas se me complico fueron los estilos CSS, en general el layout, colores y demas se me hace sencillo, pero lo que se me complica mas es la interaccion entre los diferentes componentes, que no se salgan de sus contenedores, que no se superpongan, etc.
 
-## Where to find everything
+En cuanto al JavaScript me senti mas habil en ese aspecto, pienso que lo logre solucionar en un mejor tiempo y sin mayores complicaciones.\
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Cosas que me presentaron problema. Los espacios entre los numeros de la tarjeta, tuve que usar manejo de arrays y una pequena formula para lograrlo. Otro feature que me costo un poco fue cortar el input del usuario para que no coloque mas de cierto numero de caracteres en el input
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+Establecer los pattern en el input fue un tanto complicado para hacerlos funcionar.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## Hecho con
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- simple JavaScript
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+## Lo que aprendi
 
-## Building your project
+Aprendi a modificar una background image en CSS segun mis necesidades.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+Manejar correctamente arrays pasandolos a strings o viceversa.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Reforce mis conocimientos para cambiar los estilos de errores desde JavaScript
 
-## Deploying your project
+## Aprendiendo
+Me gustaria mejorar mi habilidad para hacer layouts, sobretodo la parte de CSS es la que mas se me esta complicando
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+Me gustaria en los siguientes proyectos seguir aplicando JavaScript asi sea basico para no olvidar las cositas que he aprendido.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## Author
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+- Website - [Add your name here](https://www.your-site.com)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-## Create a custom `README.md`
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Autor
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- Website - [Portfolio en construccion](https://j-hernandezm.github.io)
+- Frontend Mentor - [@J-HernandezM](https://www.frontendmentor.io/profile/J-HernandezM)
+- Github - [@J-HernandezM](https://github.com/J-HernandezM)
+- Twitter - [@__HernandezM](https://www.twitter.com/__HernandezM)
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
