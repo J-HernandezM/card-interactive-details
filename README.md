@@ -29,7 +29,7 @@ El usuario deberia poder
 
 ## Screenshot
 
-![](./assets/images/screenshot.png)
+![](./images/screenshot.png)
 
 ## Links
 
