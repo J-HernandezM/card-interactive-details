@@ -2,6 +2,8 @@
 
 Esta es mi propuesta de solucion al reto [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw).
 
+## Tabla de contenidos
+
 - [Descripcion](#descripcion)
   - [El desafio](#el-desafio)
   - [Screenshot](#screenshot)
@@ -69,13 +71,6 @@ Me gustaria mejorar mi habilidad para hacer layouts, sobretodo la parte de CSS e
 
 Me gustaria en los siguientes proyectos seguir aplicando JavaScript asi sea basico para no olvidar las cositas que he aprendido.
 
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Autor
 
