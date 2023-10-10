@@ -12,14 +12,14 @@
     --very-dark-violet:hsl(278, 68%, 11%);
     --gradient:linear-gradient(45deg, var(--blue), var(--purple));
 
-    font-size: 6.25%;
+    /* font-size: 6.25%; */
 
-    --xxl:30rem;
-    --xl:24rem;
-    --lg:22rem;
-    --md:17rem;
-    --sm:14rem;
-    --xs:12rem;
+    --xxl:30px;
+    --xl:24px;
+    --lg:22px;
+    --md:17px;
+    --sm:14px;
+    --xs:12px;
 }
 body{
     display: grid;
@@ -36,12 +36,12 @@ body{
 /* LAYOUT */
 main{
     display: grid;
-    grid-template-rows: 240rem 1fr;
+    grid-template-rows: 240px 1fr;
 
     width: 100vw;
     height: 98vh;
-    min-width: 345rem;
-    max-width: 440rem;
+    min-width: 345px;
+    max-width: 440px;
 }
 .left{
     position:relative;
@@ -51,22 +51,22 @@ main{
     display: grid;
     place-items: center center;
 
-    min-height: 460rem;
-    max-height: 560rem;
+    min-height: 460px;
+    max-height: 560px;
 }
 /* COMPONENTES */
 
 .left__frontCard, .left__backCard{
     position: absolute;
-    height: 170rem;
-    width: 320rem;
-    right: 20rem;
-    top: 30rem;
+    height: 170px;
+    width: 320px;
+    right: 20px;
+    top: 30px;
 }
 .left__frontCard{
     z-index: 2;
-    top: 126rem;
-    left: 20rem;
+    top: 126px;
+    left: 20px;
 }
 .left__backCard{
     z-index: 1;
@@ -82,10 +82,10 @@ main{
     grid-template-rows: 50% 50%;
     place-items: end start;
     position: absolute;
-    bottom: 25rem;
-    left: 25rem;
+    bottom: 25px;
+    left: 25px;
 
-    width: 270rem;
+    width: 270px;
 
     color: var(--white);
 }
@@ -96,15 +96,15 @@ main{
 
     color: var(--white);
     font-size: var(--xs);
-    letter-spacing: 1rem;
+    letter-spacing: 1px;
 }
 
 .left__cardIcon{
     position: absolute;
-    left: 25rem;
-    top: 25rem;
+    left: 25px;
+    top: 25px;
     
-    width: 65rem;
+    width: 65px;
 
 }
 form{
@@ -142,14 +142,14 @@ form{
 }
 .btn{
     width: 100%;
-    height: 52rem;
+    height: 52px;
 
     color: var(--white);
     font-family: 'Space Grotesk', sans-serif;
     font-size: var(--md);
 
     background-color: var(--very-dark-violet);
-    border-radius: 8rem;
+    border-radius: 8px;
     border: none;
 }
 .btn:hover{
@@ -171,11 +171,11 @@ form{
     width: 100%;
 }
 .form__inputs{
-    height: 40rem;
-    padding: 20rem 0rem 20rem 20rem;
+    height: 40px;
+    padding: 20px 0px 20px 20px;
 
-    border: 1rem solid var(--light-grayish-violet);
-    border-radius: 8rem;
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 8px;
 }
 .form__inputs::placeholder{
     font-family: 'Space Grotesk', sans-serif;
@@ -196,30 +196,30 @@ form{
 .left__cardNumber{
     font-size: var(--xl);
     grid-area: 1/1/2/3;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.2px;
 }
 .left__date{
     place-self: end end;
 }
 label{
-    margin-bottom: 4rem;
+    margin-bottom: 4px;
 
-    letter-spacing: 2rem;
+    letter-spacing: 2px;
     color: var(--very-dark-violet);
     font-weight: bold;
 }
 .left__cardName{
-    letter-spacing: 1rem;
+    letter-spacing: 1px;
     font-weight: 500;
 }
 .thanks__title{
-    margin:40rem 0rem 16rem 0rem;
+    margin:40px 0px 16px 0px;
 
     font-size: var(--xxl);
     color: var(--very-dark-violet);
 }
 .thanks__description{
-    margin-bottom: 48rem;
+    margin-bottom: 48px;
 
     font-size: var(--md);
     color: var(--dark-grayish-violet);
@@ -229,7 +229,7 @@ label{
     display: none;
 }
 .modified{
-    border: 1rem solid var(--red);
+    border: 1px solid var(--red);
 }
 @media (min-width:440px) and (max-width:1059px) {
     body{
@@ -246,17 +246,17 @@ label{
     }
     .right{
         background-color: var(--white);
-        border-radius: 0 0 20rem 20rem ;
+        border-radius: 0 0 20px 20px ;
     }
     .right__thanks{
         width: 80%;
         height: 80%;
     }
     .left{
-        border-radius: 20rem 20rem 0 0;
+        border-radius: 20px 20px 0 0;
     }
     .btn{
-        height: 52rem;
+        height: 52px;
     }
 }
 @media (min-width:1060px) {
@@ -281,39 +281,39 @@ label{
     /* COMPONENTES */
     .right__thanks{
         margin: 25vh auto auto 35%;
-        width:425rem;
-        min-height: 340rem;
-        max-height: 360rem; 
+        width:425px;
+        min-height: 340px;
+        max-height: 360px; 
     }
     .left__frontCard, .left__backCard{
         top:55%;
-        right: -175rem;
+        right: -175px;
         left: auto;
-        height: 200rem;
-        width: 350rem;
+        height: 200px;
+        width: 350px;
     }
     .left__frontCard{
         top: 25%;
-        right: -88rem;
+        right: -88px;
     }
     .left__bcardInfo{
-        top: 90rem;
+        top: 90px;
     }
     .cardimages{
         object-fit: fill;
     }
     form{
         margin: 25vh auto auto 35%;
-        width:425rem;
-        min-height: 340rem;
-        max-height: 360rem;
+        width:425px;
+        min-height: 340px;
+        max-height: 360px;
     }
     .left__cardInfo{
-        width: 300rem;
+        width: 300px;
     }
     /* TYPOGRAPHY */
     .left__cardNumber{
-        letter-spacing: 1.7rem;
+        letter-spacing: 1.7px;
     }
     label{
         font-weight: 500;
